@@ -72,16 +72,14 @@ dp x,y = if arr[x] > 0 and y != arr[x] then dp x,y = 0 else dp x,y  = dp x-1,y +
     0 0 1 0 0 0 
     0 1 1 1 0 0 
     0 0 3 0 0 0 
-
-
     */
-
-   
 //    for(int i = 1 ; i<=m; i++) cout << dp[i] << " ";
 //    cout << "\n";
     int ans=0;
-    for(int i = 1 ; i<=m; i++) {ans+=dp[i]; ans%=MOD;
-
+    for(int i = 1 ; i<=m; i++) 
+    {
+        ans+=dp[i]; 
+        ans%=MOD;
     }
     cout << ans << "\n";
     return 0;
